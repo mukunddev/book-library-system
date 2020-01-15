@@ -1,0 +1,29 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.bookEntryContainer {
+  max-width: 40%;
+  margin: $space-lg * 2 auto;
+  @include media-max-custom(767px) {
+    max-width: 90%;
+  }
+  @include media-min-max(767px, 991px) {
+    max-width: 70%;
+  }
+  h3 {
+    text-align: center;
+  }
+}
+
+.entryBtn {
+  width: 100%;
+  background-color: $success-color;
+  color: $white;
+  padding: $space-lg + $space-sm;
+  margin: $space-sm + 3 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: $font-size-lg;
+  font-weight: 600;
+}

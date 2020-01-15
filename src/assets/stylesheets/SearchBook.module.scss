@@ -1,0 +1,17 @@
+@import "./mixins.scss";
+@import "./variable.scss";
+
+.searchContainer {
+  max-width: 60%;
+  margin: $space-lg * 2 auto;
+  @include media-max-custom(500px) {
+    max-width: 90%;
+  }
+  @include media-min-max(501px, 767px) {
+    max-width: 80%;
+  }
+  input {
+    font-size: $font-size-lg;
+    padding: $font-size-sm $font-size-lg + 2;
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../assets/stylesheets/mixins.scss";
+@import "../../assets/stylesheets/variable.scss";
+
+.bookContainer {
+  display: flex;
+  width: 25%;
+  padding: $space-lg;
+  color: $primary-color;
+  box-sizing: border-box;
+  min-height: 210px;
+  @include media-max-custom(500px) {
+    width: 100%;
+  }
+  @include media-min-max(501px, 767px) {
+    width: 50%;
+  }
+  @include media-min-max(768px, 991px) {
+    width: 33%;
+  }
+  .bookInnerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $light-gray;
+    width: 100%;
+    .bookInfo {
+      padding: $space-md;
+      .bookName {
+        display: flex;
+        justify-content: space-between;
+        margin: $space-md 0;
+        font-size: $font-size-lg;
+        text-transform: capitalize;
+        .bookCount {
+          border-radius: 50%;
+          background: $light-gray;
+          padding: $space-sm - 2;
+          color: white;
+          background-color: $sea-green;
+          width: 20px;
+          height: 20px;
+          font-size: $font-size-sm;
+          text-align: center;
+        }
+      }
+      .author {
+        margin: $space-md 0;
+        font-weight: 600;
+        font-size: $font-size-sm;
+      }
+      .desc {
+        margin: $space-md $space-zr;
+      }
+    }
+    .actionContainer {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid $light-gray;
+      div {
+        width: 50%;
+        padding: $space-md;
+        text-align: center;
+        &:first-child {
+          border-right: 1px solid $light-gray;
+        }
+        a {
+          text-decoration: none;
+          color: $sea-green;
+          font-weight: 500;
+          display: block;
+        }
+      }
+      .delete {
+        color: $sea-green;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover {
+          color: $dark-red;
+        }
+      }
+    }
+  }
+}

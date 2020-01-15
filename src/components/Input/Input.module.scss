@@ -1,0 +1,21 @@
+@import "../../assets//stylesheets/variable.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: $font-size-sm;
+    font-weight: 500;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: $space-md + 2 $space-lg + $space-sm;
+    margin: $space-sm + 3 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+  }
+}
